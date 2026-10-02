@@ -1,3 +1,11 @@
+const cors = require('cors');
+
+// இதை app.use(express.json())-க்கு மேலே வைக்கவும்
+app.use(cors({
+  origin: "*", // தற்காலிகமாக அனைத்து டொமைன்களையும் அனுமதிக்க
+  credentials: true
+}));
+// மற்ற ரவுட்டுகள்...
 import { useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 import { useRoomState, Stream, Classwork, People, DoubtBot, Comments } from './Panels.jsx';
