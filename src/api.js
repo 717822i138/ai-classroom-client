@@ -1,4 +1,4 @@
-export const API = import.meta.env.VITE_API_URL || 'https://ai-classroom-44-8seb.vercel.app';
+export const API = import.meta.env.VITE_API_URL || 'https://ai-classroom-server.vercel.app/';
 export const token = () => localStorage.getItem('sec_token') || '';
 const kick = () => { localStorage.removeItem('sec_token'); localStorage.removeItem('sec_user'); location.reload(); };
 async function call(path, opts = {}) {
